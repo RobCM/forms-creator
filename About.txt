@@ -1,0 +1,1 @@
+Javascript library using jQuery selecters to create and format input forms on the fly!
