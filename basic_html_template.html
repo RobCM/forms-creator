@@ -7,26 +7,64 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
-	<!-- @RobertC  2019-->
+	<!-- @RobertC  2019 -->
 	<style>
-		
+		#container {
+			position: absolute;
+			width: 450px;
+			height: 450px;
+			background-color: #a1cae6;
+			border: 5px solid #1869ab;
+		}
+		#title {
+			margin-left: 150px;
+			padding: 10px;
+			color: #1869ab;
+		}
+		.input_container {
+			padding: 10px;
+		}
+		#ssnum, #money {
+			width: 80px;
+		}
 		
 	</style>
-
-	<script>
-		
-	</script>
+	<!-- Call library --> 
+	<script src="js/format_inputs.js"></script>
 
 </head>
 
-
+	<!-- Test library -->
+	<script>
+	   $(document).ready(function(){
+			// Load dummy data on field
+			$("#ssnum").val("786687761");
+			$("#money").val(0.00);
+			
+			// On page load!
+			$("input").trigger("input");
+			
+			
+		});
+	</script>
 
 
 <body>
+	
 	<div id="container">
-		still under construction 6/22/2019!
+			<div id="title">
+				-T E S T--F O R M-
+			</div>
+			<div class="input_container">
+				<label>SSN Test:</label>
+				<input id="ssnum">
+			</div>
+			<div class="input_container">
+				<label>Money Test: $</label>
+				<input id="money">
+			</div>
 		
-	</div>	
+	</div>
 
 </body>
 </html>
