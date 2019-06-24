@@ -41,6 +41,10 @@
 			$("#ssnum").val("786687761");
 			$("#money").val(0.00);
 			
+		   	$("#ssnum").on("input", function (){
+				var test_ssn_input = $(this).val();
+				$(this).val((formatInputs.ssn(test_ssn_input)));
+			});
 			// On page load!
 			$("input").trigger("input");
 			
