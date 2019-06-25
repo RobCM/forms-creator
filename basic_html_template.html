@@ -45,6 +45,12 @@
 				var test_ssn_input = $(this).val();
 				$(this).val((formatInputs.ssn(test_ssn_input)));
 			});
+		   
+		   	$("#money").on("input", function (){
+				var test_money_input = $(this).val();
+				$(this).val((formatInputs.money(test_money_input)));
+			});
+		   
 			// On page load!
 			$("input").trigger("input");
 			
