@@ -26,6 +26,22 @@
 			return format_ssn;
 		};
 		
+		// For money/currency formating (0.00)
+		formatLibrary.money = function(format_money){
+			
+			format_money = parseFloat(format_money);
+			format_money = format_money.toFixed(2);
+			// If user enters a none numeric value!
+			if(isNaN(format_money)){
+				format_money = "";
+			}
+			else{
+				return format_money;
+			}
+			
+			return format_money;
+		};
+		
 		// Return library objects
 		return formatLibrary;
 		
