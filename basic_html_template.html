@@ -40,7 +40,9 @@
 			// Load dummy data on field
 			$("#ssnum").val("786687761");
 			$("#money").val(0.00);
-			
+			$("#firstname").val("bobby");
+			$("#lastname").val("barron");
+		   
 		   	$("#ssnum").on("input", function (){
 				var test_ssn_input = $(this).val();
 				$(this).val((formatInputs.ssn(test_ssn_input)));
@@ -49,6 +51,11 @@
 		   	$("#money").on("input", function (){
 				var test_money_input = $(this).val();
 				$(this).val((formatInputs.money(test_money_input)));
+			});
+		   
+		        $("#firstname, #lastname").on("input", function (){
+				var test_name_input = $(this).val();
+				$(this).val((formatInputs.name(test_name_input)));
 			});
 		   
 			// On page load!
@@ -64,6 +71,14 @@
 	<div id="container">
 			<div id="title">
 				-T E S T--F O R M-
+			</div>
+		        <div class="input_container">
+				<label>First Name Test:</label>
+				<input id="firstname">
+			</div>
+			<div class="input_container">
+				<label>Last Name Test:</label>
+				<input id="lastname">
 			</div>
 			<div class="input_container">
 				<label>SSN Test:</label>
