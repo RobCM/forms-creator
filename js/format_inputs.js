@@ -42,6 +42,14 @@
 			return format_money;
 		};
 		
+		// For name format (starts with capital letter)
+		formatLibrary.name = function(format_name){
+			
+			format_name = format_name.substr(0, 1).toUpperCase() + format_name.substr(1);
+			
+			return format_name;
+		};
+		
 		// Return library objects
 		return formatLibrary;
 		
