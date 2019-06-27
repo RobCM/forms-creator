@@ -5,8 +5,6 @@
 		* Social security number
 		* Money 
 		* Name (starts with capital letter)
-		* Date
-		* and others...
 	
 */
 (function(window){
