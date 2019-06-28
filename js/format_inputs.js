@@ -51,7 +51,10 @@
 		// For date format ()
 		formatLibrary.date = function(format_date){
 			
-			// Still working on this!
+			/*
+				Still working on this!
+			 	might do a custom logic based on a switch statement approach
+			*/
 			
 			return format_date;
 		};
