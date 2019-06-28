@@ -54,9 +54,35 @@
 			/*
 				Still working on this!
 			 	might do a custom logic based on a switch statement approach
+				
+				var build_date_one = format_date;
+			
+				// Prepare array from data 
+				var build_date_two = build_date_one.split("/");
+
+				// Verify correct syntax is use for input!
+				if(build_date_two[0].length > 2 || build_date_two[0].length < 2){
+					 console.log("Bad input on xx//");
+					 format_date = "Bad input on xx//";
+					 return format_date;
+				}	
+				if(build_date_two[1].length > 2 || build_date_two[1].length < 2){
+					 console.log("Bad input on /xx/");
+					 format_date = "Bad input on /xx/";
+					 return format_date;
+				}	
+				if(build_date_two[2].length > 4 || build_date_two[2].length < 4){
+					 console.log("Bad input on //xxxx");
+					 format_date = "Bad input on //xxxx";
+					 return format_date;
+				}	
+
+				// Else---> construct final and desire date format
+				format_date = build_date_two[0] + "|" + build_date_two[1] + "|" + build_date_two[2];	
+				return format_date;
 			*/
 			
-			return format_date;
+			
 		};
 
 		
