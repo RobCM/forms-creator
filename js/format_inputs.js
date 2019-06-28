@@ -48,6 +48,15 @@
 			return format_name;
 		};
 		
+		// For date format ()
+		formatLibrary.date = function(format_date){
+			
+			// Still working on this!
+			
+			return format_date;
+		};
+
+		
 		// Return library objects
 		return formatLibrary;
 		
