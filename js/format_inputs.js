@@ -77,8 +77,24 @@
 					 return format_date;
 				}	
 
-				// Else---> construct final and desire date format
-				format_date = build_date_two[0] + "|" + build_date_two[1] + "|" + build_date_two[2];	
+				// Construct final and desire date format
+				var date_month = build_date_two[0];
+				var date_day = "";
+				var date_year = "";
+
+				// Validating month
+				switch(date_month){
+					case "01":
+						date_month = "January";
+					break;
+					case "02":
+						date_month = "February";
+					break;
+					default:
+						date_month = "Bad input use 01 format";
+					break;
+				}
+				
 				return format_date;
 			*/
 			
