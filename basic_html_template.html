@@ -27,40 +27,47 @@
 		#ssnum, #money {
 			width: 80px;
 		}
+		#date {
+			width: 200px;
+		}
 		
 	</style>
+	
 	<!-- Call library --> 
 	<script src="js/format_inputs.js"></script>
 
 </head>
-
 	<!-- Test library -->
 	<script>
 	   $(document).ready(function(){
+	   
 			// Load dummy data on field
 			$("#ssnum").val("786687761");
 			$("#money").val(0.00);
 			$("#firstname").val("bobby");
 			$("#lastname").val("barron");
-		   
-		   	$("#ssnum").on("input", function (){
+			$("#date").val("09/01/1000");
+			
+			// On input behavior
+			$("#ssnum").on("input", function (){
 				var test_ssn_input = $(this).val();
 				$(this).val((formatInputs.ssn(test_ssn_input)));
 			});
-		   
-		   	$("#money").on("input", function (){
+			$("#money").on("input", function (){
 				var test_money_input = $(this).val();
 				$(this).val((formatInputs.money(test_money_input)));
 			});
-		   
-		        $("#firstname, #lastname").on("input", function (){
+			$("#firstname, #lastname").on("input", function (){
 				var test_name_input = $(this).val();
 				$(this).val((formatInputs.name(test_name_input)));
 			});
-		   
+			// Click on the input box!
+			$("#date").on("click", function (){
+				var test_date_input = $(this).val();
+				$(this).val((formatInputs.date(test_date_input)));
+			});
 			// On page load!
-			$("input").trigger("input");	
-			
+			$("input").trigger("input");
 		});
 	</script>
 
@@ -71,7 +78,7 @@
 			<div id="title">
 				-T E S T--F O R M-
 			</div>
-		        <div class="input_container">
+			<div class="input_container">
 				<label>First Name Test:</label>
 				<input id="firstname">
 			</div>
@@ -84,15 +91,14 @@
 				<input id="ssnum">
 			</div>
 			<div class="input_container">
-				<label>Date Test: </label>
-				<input id="date">
-			</div>
-			<div class="input_container">
 				<label>Money Test: $</label>
 				<input id="money">
 			</div>
-		
+			<div class="input_container">
+				<label>Date Test: </label><br>
+				<label>Convert 00/00/0000 to Month day, year</label><br>
+				<input id="date">
+			</div>
 	</div>
-
 </body>
 </html>
