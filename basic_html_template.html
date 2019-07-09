@@ -30,23 +30,28 @@
 		#date {
 			width: 200px;
 		}
+		#validate {
+			margin-top: 10px;
+			margin-left: 170px;
+		}
 		
 	</style>
-	
 	<!-- Call library --> 
 	<script src="js/format_inputs.js"></script>
 
 </head>
+
 	<!-- Test library -->
 	<script>
 	   $(document).ready(function(){
 	   
 			// Load dummy data on field
-			$("#ssnum").val("111111111");
+			$("#ssnum").val("786687761");
 			$("#money").val(0.00);
 			$("#firstname").val("bobby");
 			$("#lastname").val("barron");
 			$("#date").val("09/01/1000");
+			$("#phone").val((formatInputs.phonenum("5555555555")));
 			
 			// On input behavior
 			$("#ssnum").on("input", function (){
@@ -61,9 +66,13 @@
 				var test_name_input = $(this).val();
 				$(this).val((formatInputs.name(test_name_input)));
 			});
-			$("#date").on("click", function (){
-				var test_date_input = $(this).val();
-				$(this).val((formatInputs.date(test_date_input)));
+			$("#validate").on("click", function (){
+				var test_date_input = $("#date").val();
+				$("#date").val((formatInputs.date(test_date_input)));
+			});
+			$("#phone").on("input", function (){
+				var test_phonenum_input = $(this).val();
+				$(this).val((formatInputs.phonenum(test_phonenum_input)));
 			});
 			// On page load!
 			$("input").trigger("input");
@@ -96,8 +105,14 @@
 			<div class="input_container">
 				<label>Date Test: </label><br>
 				<label>Convert 00/00/0000 to Month day, year</label><br>
-				<input id="date">
+				<input id="date"><br>
+				<button id="validate">Check Date</button>
+			</div>
+			<div class="input_container">
+				<label>Phone Number Test: </label><br>
+				<input id="phone"><br>
 			</div>
 	</div>
+
 </body>
 </html>
