@@ -6,8 +6,10 @@
 		* Money 
 		* Name 
 		* Date
-		* phone number
+		* Phone 
+	
 */
+
 (function(window){
 	function format_inputs(){
 		
@@ -158,11 +160,18 @@
 			return format_date;
 		};
 		
-		/*
-		formatLibrary.phonenum = function(format_phonenum){
-			Working on this still!
+		// For phone number format (000)000-0000
+		formatLibrary.phonenum = function(format_phonenum){	
+		
+			if(format_phonenum.length > 13){
+				format_phonenum = "Bad Input";
+			}
+			else{
+				format_phonenum = format_phonenum.replace(/(\d{3})(\d{3})(\d{4})/, "($1)$2-$3");
+			}
+			
+			return format_phonenum;
 		}
-		*/
 
 		// Return library objects
 		return formatLibrary;
