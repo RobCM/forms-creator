@@ -5,7 +5,8 @@
 		* Social security number
 		* Money 
 		* Name 
-		* Date	
+		* Date
+		* phone number
 */
 (function(window){
 	function format_inputs(){
@@ -156,6 +157,12 @@
 			format_date = date_month + " " + date_day + ", " + date_year;	
 			return format_date;
 		};
+		
+		/*
+		formatLibrary.phonenum = function(format_phonenum){
+			Working on this still!
+		}
+		*/
 
 		// Return library objects
 		return formatLibrary;
