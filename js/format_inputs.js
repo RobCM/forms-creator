@@ -172,6 +172,8 @@
 			
 			return format_phonenum;
 		}
+		
+		// Might work on a credit card format as well!
 
 		// Return library objects
 		return formatLibrary;
