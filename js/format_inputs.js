@@ -7,6 +7,7 @@
 		* Name 
 		* Date
 		* Phone 
+		* Credit Card
 	
 */
 
@@ -174,6 +175,11 @@
 		}
 		
 		// Might work on a credit card format as well!
+		formatLibrary.creditcard = function(format_creditcard){	
+		       // In the works!
+		
+			return format_creditcard;
+		}
 
 		// Return library objects
 		return formatLibrary;
