@@ -52,6 +52,7 @@
 			$("#lastname").val("barron");
 			$("#date").val("09/01/1000");
 			$("#phone").val("5555555555");
+			$("#credit_card").val("9999999999999999");
 			
 			// On input behavior
 			$("#ssnum").on("input", function (){
@@ -74,6 +75,10 @@
 				var test_phonenum_input = $(this).val();
 				$(this).val((formatInputs.phonenum(test_phonenum_input)));
 			});
+			$("#credit_card").on("input", function (){
+				var test_credit_card_input = $(this).val();
+				$(this).val((formatInputs.creditcard(test_credit_card_input)));
+			});
 			// On page load!
 			$("input").trigger("input");
 		});
@@ -84,7 +89,7 @@
 	
 	<div id="container">
 			<div id="title">
-				-T E S T--F O R M-
+				-T E S T-DEMO-F O R M-
 			</div>
 			<div class="input_container">
 				<label>First Name Test:</label>
@@ -111,6 +116,10 @@
 			<div class="input_container">
 				<label>Phone Number Test: </label><br>
 				<input id="phone"><br>
+			</div>
+			<div class="input_container">
+				<label>Credit Card Test: </label><br>
+				<input id="credit_card"><br>
 			</div>
 	</div>
 
