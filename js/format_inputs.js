@@ -10,7 +10,6 @@
 		* Credit Card
 	
 */
-
 (function(window){
 	function format_inputs(){
 		
@@ -21,7 +20,7 @@
 		// For ssn formating (000-00-0000)
 		formatLibrary.ssn = function(format_ssn){
 
-			 format_ssn = format_ssn.split(/\D+/g).join("");
+			 format_ssn = format_ssn.split(/\D+/g).join(""); // Block letter and characters as inputs!
 			 format_ssn = format_ssn.match(/(\d{1,3})(?:(\d{1,2})(\d{1,4})?)?/);
 			 if (format_ssn){
 				 format_ssn.shift();
@@ -164,19 +163,27 @@
 		// For phone number format (000)000-0000
 		formatLibrary.phonenum = function(format_phonenum){	
 		
-			if(format_phonenum.length > 13){
-				format_phonenum = "Bad Input";
-			}
-			else{
+			format_phonenum = format_phonenum.split(/\D+/g).join(""); 
+			if(format_phonenum.length = 13){
 				format_phonenum = format_phonenum.replace(/(\d{3})(\d{3})(\d{4})/, "($1)$2-$3");
+			}
+			if(format_phonenum.length > 13){
+				format_phonenum = "";
 			}
 			
 			return format_phonenum;
 		}
 		
-		// Might work on a credit card format as well!
+		// Credit card format 
 		formatLibrary.creditcard = function(format_creditcard){	
-		       // In the works!
+			
+			format_creditcard = format_creditcard.split(/\D+/g).join(""); 
+			if(format_creditcard.length = 19){
+				format_creditcard = format_creditcard.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, "$1-$2-$3-$4");
+			}
+			if(format_creditcard.length > 19){
+				format_creditcard = "";
+			}
 		
 			return format_creditcard;
 		}
