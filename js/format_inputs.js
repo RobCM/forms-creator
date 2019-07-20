@@ -8,6 +8,7 @@
 		* Date
 		* Phone 
 		* Credit Card
+		* Selection options
 	
 */
 (function(window){
@@ -190,6 +191,7 @@
 		
 		/* 
 			working on a new add on 7/20/2019!
+			-Selection options-
 		*/
 
 		// Return library objects
