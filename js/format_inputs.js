@@ -195,8 +195,7 @@
 		*/
 
 		// Return library objects
-		return formatLibrary;
-		
+		return formatLibrary;	
 	}
 	
 	// Making the library global so it can be save in the window!
