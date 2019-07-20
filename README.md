@@ -6,6 +6,8 @@ This include input formats for:
     <li>Money</li>
     <li>Names</li>
     <li>Date</li>
+    <li>Phone</li>
+    <li>Credit Card</li>
   </ul>
 The code provided here is to be shared freely with out no financial gain.
 Please fill free to copy it and modify it as you wish and 
