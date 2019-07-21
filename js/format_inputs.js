@@ -189,13 +189,22 @@
 			return format_creditcard;
 		}
 		
-		/* 
-			working on a new add on 7/20/2019!
-			-Selection options-
-		*/
+		// Selection options maker
+		formatLibrary.selection = function(selection_title, selection_id, selection_one, selection_two, selection_three){	
+			
+			var format_selection =  "<label>" + selection_title + ": </label>" +
+ 									"<select id =\"" + selection_id + "\">" +
+										"<option>" + selection_one + "</option>" +
+										"<option>" + selection_two + "</option>" +
+										"<option>" + selection_three + "</option>" +		 
+									"</select>";
+		
+			return format_selection;
+		}
 
 		// Return library objects
-		return formatLibrary;	
+		return formatLibrary;
+		
 	}
 	
 	// Making the library global so it can be save in the window!
