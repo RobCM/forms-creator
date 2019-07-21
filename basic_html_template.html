@@ -79,6 +79,17 @@
 				var test_credit_card_input = $(this).val();
 				$(this).val((formatInputs.creditcard(test_credit_card_input)));
 			});
+			/*
+				Selection menu here you can easy edit your select options 
+				("title", "select id", "option 1", "option 2", "option 3")
+			*/
+			$("#select_menu").html(formatInputs.selection("Animals", "animal_selection", "Doggy", "Cat", "Birdy"));
+			// Example on how to catch input from selection menu!
+			$("#animal_selection").on("input", function (){
+				var test_selection_input = $("#animal_selection").val();
+				console.log(test_selection_input);
+			});
+			
 			// On page load!
 			$("input").trigger("input");
 		});
@@ -121,6 +132,10 @@
 				<label>Credit Card Test: </label><br>
 				<input id="credit_card"><br>
 			</div>
+			<div class="input_container">
+				<div id="select_menu"></div>
+			</div>
+			
 	</div>
 
 </body>
