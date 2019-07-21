@@ -8,6 +8,7 @@ This include input formats for:
     <li>Date</li>
     <li>Phone</li>
     <li>Credit Card</li>
+    <li>Selection options</li>
   </ul>
   <br>
 The code provided here is to be shared freely with out no financial gain.
