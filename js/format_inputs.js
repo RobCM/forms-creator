@@ -201,6 +201,14 @@
 		
 			return format_selection;
 		}
+		
+		// String to caps
+		formatLibrary.capstext = function(test_tocaps){
+			
+			test_tocaps = str.toUpperCase();
+			
+			return test_tocaps;
+		}
 
 		// Return library objects
 		return formatLibrary;
